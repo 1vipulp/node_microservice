@@ -1,0 +1,44 @@
+{
+  "name": "node_microservice",
+  "version": "1.0.0",
+  "description": "Node microservice with Express.js framework + MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon -e js,env,html -w .environment --watch src/ --exec \"node -r dotenv/config\" app.js dotenv_config_path=.environment/prod.env",
+    "start:dev": "./node_modules/.bin/nodemon -e js,env,html -w .environment --watch src/ --exec \"node -r dotenv/config\" app.js dotenv_config_path=.environment/dev.env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1vipulp/node_microservice.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "microservice",
+    "mongodb",
+    "architecture"
+  ],
+  "author": "Vipul Panchal <vipulpanchal.5758@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1vipulp/node_microservice/issues"
+  },
+  "homepage": "https://github.com/1vipulp/node_microservice#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-http-context": "^1.2.4",
+    "http-status-codes": "^2.1.4",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.4",
+    "randomstring": "^1.1.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "bunyan": "^1.8.15",
+    "nodemon": "^2.0.7"
+  }
+}

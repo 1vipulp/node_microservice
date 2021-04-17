@@ -23,10 +23,6 @@ module.exports.userRegistration = async (body, language) => {
   const bodyToSave = { ...body }
   bodyToSave.password = await generateHash(body.password)
 
-  await userRepo.updateData({
-    user
-  })
-
   await userRepo.createData(bodyToSave)
   return { data: true }
 }
